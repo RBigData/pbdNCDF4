@@ -1,10 +1,11 @@
 ### Configurations.
 SPMD_CPPFLAGS = @SPMD_CPPFLAGS@
 SPMD_LDFLAGS = @SPMD_LDFLAGS@
-NETCDF_CPPFLAGS = @NETCDF_CPPFLAGS@
+NETCDF_CPPFLAGS = @NETCDF_CPPFLAGS@ -DNETCDF_INCLUDE=@NETCDF_INCLUDE@
 NETCDF_LDFLAGS = @NETCDF_LDFLAGS@
 
 ### Extra configurations.
+NETCDF_HEADER = @NETCDF_HEADER@
 NETCDF_INCLUDE = @NETCDF_INCLUDE@
 NETCDF_PAR = @NETCDF_PAR@
 NETCDF_PAR_OBJS = @NETCDF_PAR_OBJS@
@@ -24,10 +25,9 @@ USER_CONF = Makeconf
 
 ### Start making here.
 all: $(SHLIB)
-	@if test "X$(NETCDF_PAR)" = "XTRUE"; then cp -f ../R.par/* ../R/; fi
-	@if test "X$(NETCDF_PAR)" = "XFALSE"; then cp -f ../R.ser/* ../R/; fi
 	@echo "SPMD_CPPFLAGS = $(SPMD_CPPFLAGS)" > $(USER_CONF)
 	@echo "SPMD_LDFLAGS = $(SPMD_LDFLAGS)" >> $(USER_CONF)
+	@echo "NETCDF_HEADER = $(NETCDF_HEADER)" >> $(USER_CONF)
 	@echo "NETCDF_INCLUDE = $(NETCDF_INCLUDE)" >> $(USER_CONF)
 	@echo "NETCDF_PAR = $(NETCDF_PAR)" >> $(USER_CONF)
 	@echo "NETCDF_PAR_OBJS = $(NETCDF_PAR_OBJS)" >> $(USER_CONF)
@@ -37,8 +37,6 @@ all: $(SHLIB)
 	@echo "HAVE_NETCDF = $(HAVE_NETCDF)" >> $(USER_CONF)
 	@echo "PKG_CPPFLAGS = $(PKG_CPPFLAGS)" >> $(USER_CONF)
 	@echo "PKG_LIBS = $(PKG_LIBS)" >> $(USER_CONF)
-
-$(SHLIB): $(OBJECTS)
 
 clean:
 	@rm -rf *.o *.d *.rc *.so* *.dll *.dylib *.a *.lib Makedeps Makevars \

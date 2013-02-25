@@ -15,7 +15,11 @@ and any changes in future versions can be found on website:
 
 The \pkg{pbdNCDF4} package is an interface to the parallel NetCDF4 library \citep{netcdf} hosted by the Unidata program at the University Corporation for Atmospheric Research (UCAR). The package also requires the parallel HDF5 library \citep{hdf5} originally developed at the National Center for Supercomputing Applications. Full details about the system requirements and installation instructions for \pkg{pbdNCDF4} are provided in the following section.
 
-The \pkg{pbdNCDF4} package is in part based on, and incorporates, the \pkg{ncdf4} package, version 1.8 by David Pierce \citep{ncdf4}.  
+The \pkg{pbdNCDF4} package is fully based on, and incorporates, the \pkg{ncdf4} package, version 1.8 by David Pierce \citep{ncdf4}.  
+
+{\color{red} \bf Warning:}
+We only have success for installing and passing tests by using version 1.8.5 of HDF5 and version 4.1.1 of NetCDF4.  Other versions may have parallel I/O problems even installation is correct.
+
 
 \subsection[System Requirements]{System Requirements}
 \label{sec:system_requirements}
@@ -31,9 +35,6 @@ In order to install the \pkg{pbdNCDF4} package, you must first have system insta
 \end{enumerate}
 
 Ideally, the user needs to install the parallel versions of the HDF5 and NetCDF4 libraries, and in such case, these libraries should be compiled with MPI.  The \pkg{pbdNCDF4} package functions with serial installations of these libraries, but then only serial reading is possible, obviously.  In the event that the parallel versions of the HDF5 and NetCDF4 libraries are not available, \pkg{pbdNCDF4} acts as \pkg{ncdf4}. See Section~\ref{sec:collective} for details.
-
-{\color{red} \bf Warning:}
-In testing, we used version 1.8.5 of HDF5 and version 4.1.1 of NetCDF4.  Other versions may have parallel I/O problems.
 
 
 

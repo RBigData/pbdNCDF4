@@ -1,6 +1,7 @@
 ### Modified from Rserve/src/install.libs.R
 ### For libs
-files <- c("pbdNCDF4.so", "pbdNCDF4.so.dSYM", "pbdNCDF4.dylib", "pbdNCDF4.dll")
+files <- c("pbdNCDF4.so", "pbdNCDF4.so.dSYM", "pbdNCDF4.dylib", "pbdNCDF4.dll",
+           "symbols.rds")
 files <- files[file.exists(files)]
 if(length(files) > 0){
   libsarch <- if (nzchar(R_ARCH)) paste("libs", R_ARCH, sep='') else "libs"

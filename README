@@ -1,0 +1,17 @@
+pbdNCDF4 is a parallel version of ncdf4 package for interface to parallel
+Unidata NetCDF4 format data files.
+
+pbdNCDF4 requires
+  - R version 2.14.0 or higher with pbdMPI.
+  - SUN HPC 8.2.1 (OpenMPI) for Solaris.
+  - OpenMPI for Linux.
+  - OpenMPI for Mac OS X.
+  - HDF5 library.
+  - NetCDF4 library.
+
+For installing pbdNCDF4, 
+  - see "INSTALL" for Solaris, Linux and Mac OS.
+
+More information about pbdNCDF4 can be found in
+  1. pbdNCDF4 vignette at 'pbdNCDF4/inst/doc/pbdNCDF4-guide.pdf'
+  2. 'http://r-pbd.org/'.

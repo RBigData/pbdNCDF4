@@ -114,6 +114,15 @@ nc_create_par <- function(filename, vars, force_v4 = TRUE, verbose = FALSE,
 
 
 nc_var_par_access <- function(nc, var, collective = TRUE, verbose = FALSE){
+  nc.format <- ncdf4_format(nc$id)
+  if(nc.format != "NC_FORMAT_NETCDF4"){
+    comm.cat("\nnc.format = ", nc.format, " is not for parallel I/O.\n",
+             sep = "", quiet = TRUE)
+    comm.cat("Warning: Serial write need more caution in parallel.\n\n",
+             sep = "", quiet = TRUE)
+    return(invisible())
+  }
+
   if( verbose )
     print(paste("nc_var_par_access: entering with collective=",collective))
 

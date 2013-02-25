@@ -1,3 +1,7 @@
+2013-02-20: ver. 0.1-0
+  * Fix bugs in "configure.in" and "src/Makevar.in".
+  * Test read and write for both serial and parallel.
+  * Add file format checking to avoid crash.
 
 ======================= Log Before Release =====================================
 2012-12-26:
