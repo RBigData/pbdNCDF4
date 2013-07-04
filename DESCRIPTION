@@ -1,6 +1,6 @@
 Package: pbdNCDF4
 Version: 0.1-1
-Date: 2013-06-10
+Date: 2013-07-04
 Title: Programming with Big Data -- Interface to Parallel Unidata
         NetCDF4 Format Data Files
 Authors@R: c(person("Pragneshkumar", "Patel", role = c("aut", "cre"), email =

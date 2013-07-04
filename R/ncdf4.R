@@ -1349,14 +1349,73 @@ ncvar_add <- function( nc, v, verbose=FALSE, indefine=FALSE ) {
 	#---------------------------------
 	# Now actually create the variable
 	#---------------------------------
-	newvar<-.C(funcname,
-		as.integer(ncid2use),
-		as.character(name2use),
-		as.integer(v$ndims),
-		as.integer(dimids),	
-		id=as.integer(newvar$id),
-		error=as.integer(newvar$error),
-		PACKAGE="pbdNCDF4")
+	### WCC: R CMD check warning.
+	# newvar<-.C(funcname,
+	# 	as.integer(ncid2use),
+	# 	as.character(name2use),
+	# 	as.integer(v$ndims),
+	# 	as.integer(dimids),	
+	# 	id=as.integer(newvar$id),
+	# 	error=as.integer(newvar$error),
+	# 	PACKAGE="pbdNCDF4")
+	### WCC: avoid R CMD check warning.
+	if( (v$prec == "integer") || (v$prec == "int") ){
+		newvar<-.C("R_nc4_def_var_int",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else if( v$prec == "short" ){
+		newvar<-.C("R_nc4_def_var_short",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else if( v$prec == "float" ){
+		newvar<-.C("R_nc4_def_var_float",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else if( v$prec == "double" ){
+		newvar<-.C("R_nc4_def_var_double",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else if( v$prec == "char" ){
+		newvar<-.C("R_nc4_def_var_char",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else if( v$prec == "byte" ){
+		newvar<-.C("R_nc4_def_var_byte",
+			as.integer(ncid2use),
+			as.character(name2use),
+			as.integer(v$ndims),
+			as.integer(dimids),	
+			id=as.integer(newvar$id),
+			error=as.integer(newvar$error),
+			PACKAGE="pbdNCDF4")
+	} else{
+		stop(paste("internal error in nc_create: var has unknown precision:",v$prec,". Known vals: short float double integer char byte"))
+	}
 	if( verbose )
 		print(paste("nc_create: C call returned value",newvar$error))
 	if( newvar$error != 0 ) {

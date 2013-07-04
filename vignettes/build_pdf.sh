@@ -7,3 +7,6 @@ pdflatex pbdNCDF4-guide.Rnw
 pdflatex pbdNCDF4-guide.Rnw
 pdflatex pbdNCDF4-guide.Rnw
 rm *.aux *.bbl *.blg *.log *.out *.toc
+
+mv -f *.pdf ../inst/doc/
+cp -f *.Rnw ../inst/doc/

@@ -1,0 +1,114 @@
+%\VignetteIndexEntry{pbdNCDF4-guide}
+
+\documentclass[article,shortnames,nojss]{pbdNCDF4-include/jss}
+
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\definecolor{mygreen}{RGB}{0,150,0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% almost as usual
+\author{
+\begin{minipage}{6in}
+\centering
+Pragneshkumar Patel$^1$, George Ostrouchov$^{1,2}$, Wei-Chen Chen$^2$, \\
+Drew Schmidt$^1$, and David Pierce$^3$
+\end{minipage}
+\\
+\\
+$^1$Remote Data Analysis and Visualization Center,\\
+University of Tennessee, \\
+Knoxville, TN, USA \\
+\\
+$^2$Computer Science and Mathematics Division, \\
+Oak Ridge National Laboratory, \\
+Oak Ridge, TN, USA \\
+\\
+$^3$Climate Research Division,\\
+Scripps Institution of Oceanography,\\
+UC San Diego, \\
+San Diago, CA, USA
+%\\
+%\\
+%\today
+}
+\title{A Quick Guide for the \pkg{pbdNCDF4} Package}
+%\\
+%\vspace{0.2cm} \large (Based on Version 0.1-2)}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Pragneshkumar Patel, George Ostrouchov, Wei-Chen Chen, Drew Schmidt, David Pierce} %% comma-separated
+\Plaintitle{Quick Guide for pbdNCDF4} %% without formatting
+\Shorttitle{Quick Guide for pbdNCDF4} %% a short title (if necessary)
+
+%% an abstract and keywords
+%\Abstract{
+%}
+%\Keywords{}
+%\Plainkeywords{} %% without formatting
+%% at least one keyword must be supplied
+
+%% publication information
+%% NOTE: Typically, this can be left commented and will be filled out by the technical editor
+%% \Volume{13}
+%% \Issue{9}
+%% \Month{September}
+%% \Year{2004}
+%% \Submitdate{2004-09-29}
+%% \Acceptdate{2004-09-29}
+
+%% The address of (at least) one author should be given
+%% in the following format:
+\Address{
+  Pragneshkumar Patel\\
+  E-mail: \email{pragnesh@utk.edu}\\
+  URL: \url{http://r-pbd.org/}
+}
+%% It is also possible to add a telephone and fax number
+%% before the e-mail in the following format:
+%% Telephone: +43/1/31336-5053
+%% Fax: +43/1/31336-734
+
+%% for those who use Sweave please include the following line (with % symbols):
+%% need no \usepackage{Sweave.sty}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./pbdNCDF4-include/00-preamble}
+
+\begin{document}
+
+\pagenumbering{roman}
+\tableofcontents
+
+%\newpage
+\input{./pbdNCDF4-include/01-copyright}
+
+%% include your article here, just as usual
+%% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
+
+\newpage
+\input{./pbdNCDF4-include/01-acknowledgement}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{./pbdNCDF4-include/01-introduction}
+\input{./pbdNCDF4-include/02-extra}
+\input{./pbdNCDF4-include/03-collective}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliography{./pbdNCDF4-include/pbdNCDF4}
+
+\end{document}
+

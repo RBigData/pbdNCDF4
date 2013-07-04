@@ -2,7 +2,7 @@
   * Test on newer HDF5 and NetCDF4 libraries added to the vignette.
   * Citation typo fixed.
   * Edit vignettes.
-  * Move vignettes.
+  * Move vignettes to vignettes/.
 
 2013-02-20: ver. 0.1-0
   * Fix bugs in "configure.in" and "src/Makevar.in".
