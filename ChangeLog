@@ -1,3 +1,9 @@
+2013-07-02: ver. 0.1-1
+  * Test on newer HDF5 and NetCDF4 libraries added to the vignette.
+  * Citation typo fixed.
+  * Edit vignettes.
+  * Move vignettes.
+
 2013-02-20: ver. 0.1-0
   * Fix bugs in "configure.in" and "src/Makevar.in".
   * Test read and write for both serial and parallel.

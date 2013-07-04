@@ -3,8 +3,8 @@ citHeader("To cite pbdNCDF4 in a publication use:")
 citEntry(
   entry = "Misc",
   title = "{pbdNCDF4}: Programming with Big Data -- Interface to Parallel Unidata {NetCDF4} Format Data Files",
-  author = personList(as.person("George Ostrouchov"),
-                      as.person("Pragneshkumar Patel"),
+  author = personList(as.person("Pragneshkumar Patel"),
+                      as.person("George Ostrouchov"),
                       as.person("Wei-Chen Chen"),
                       as.person("Drew Schmidt"),
                       as.person("David Pierce")),
@@ -17,8 +17,8 @@ citEntry(
 citEntry(
   entry = "Manual",
   title = "A Quick Guide for the {pbdNCDF4} Package",
-  author = personList(as.person("George Ostrouchov"),
-                      as.person("Pragneshkumar Patel"),
+  author = personList(as.person("Pragneshkumar Patel"),
+                      as.person("George Ostrouchov"),
                       as.person("Wei-Chen Chen"),
                       as.person("Drew Schmidt"),
                       as.person("David Pierce")),

@@ -18,3 +18,4 @@ rm -rf ./inst/etc*
 
 rm -rf ./R/pncdf4*.R
 rm -rf ./R/zzz.R
+rm -rf ./inst/doc/

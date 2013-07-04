@@ -1,4 +1,10 @@
-{\color{red} \bf Warning:} This document is written to explain the main
+{\color{red} \bf Warning:}
+The findings and conclusions in this article have not been
+formally disseminated by the U.S. Department of Energy
+and should not be construed to represent any determination or
+policy of University, Agency and National Laboratory.
+
+This document is written to explain the main
 functions of \pkg{pbdNCDF4}~\citep{Ostrouchov2012pbdNCDF4package},
 version 0.1-0.
 Every effort will be made to ensure future versions are consistent with
@@ -9,6 +15,9 @@ Information about the functionality of this package,
 and any changes in future versions can be found on website:
 \url{http://r-pbd.org/}.
 
+
+
+
 \section{Introduction}
 \label{sec:quick_start}
 \addcontentsline{toc}{section}{\thesection. Introduction}
@@ -18,7 +27,14 @@ The \pkg{pbdNCDF4} package is an interface to the parallel NetCDF4 library \cite
 The \pkg{pbdNCDF4} package is fully based on, and incorporates, the \pkg{ncdf4} package, version 1.8 by David Pierce \citep{ncdf4}.  
 
 {\color{red} \bf Warning:}
-We only have success for installing and passing tests by using version 1.8.5 of HDF5 and version 4.1.1 of NetCDF4.  Other versions may have parallel I/O problems even installation is correct.
+We have success for installing and passing tests by using the following
+combinations:
+\begin{itemize}
+\item HDF5-1.8.5 and NetCDF-4.1.1,
+\item HDF5-1.8.8 and NetCDF-4.2.0, or
+\item HDF5-1.8.11 and NetCDF-4.3.0.
+\end{itemize}
+Other versions may have parallel I/O problems even installation is correct.
 
 
 \subsection[System Requirements]{System Requirements}

@@ -1,6 +1,6 @@
 Package: pbdNCDF4
 Version: 0.1-1
-Date: 2013-02-25
+Date: 2013-06-10
 Title: Programming with Big Data -- Interface to Parallel Unidata
         NetCDF4 Format Data Files
 Authors@R: c(person("Pragneshkumar", "Patel", role = c("aut", "cre"), email =
@@ -9,7 +9,7 @@ Authors@R: c(person("Pragneshkumar", "Patel", role = c("aut", "cre"), email =
         person("Wei-Chen", "Chen", role = "aut"),
         person("Drew", "Schmidt", role = "aut"),
         person("David", "Pierce", role = "aut"))
-Depends: R (>= 2.13.0), methods, rlecuyer, pbdMPI (>= 0.1-4)
+Depends: R (>= 2.14.0), methods, rlecuyer, pbdMPI (>= 0.1-6)
 LazyLoad: yes
 LazyData: yes
 OS_type: unix
@@ -23,10 +23,10 @@ SystemRequirements: OpenMPI (>= 1.5.4) on Solaris, Linux and Mac.
         Parallel HDF5 and NetCDF4 (4.1 or later) libraries.
 License: GPL (>= 3)
 URL: http://r-pbd.org/
-BugReports: RBigDataProgramming on Google Group
+BugReports: http://group.r-pbd.org/
 MailingList: Please send questions and comments regarding pbdR to
         RBigData@gmail.com
-Packaged: 2013-02-25 18:05:25 UTC; snoweye
+Packaged: 2013-07-03 16:55:26 UTC; snoweye
 Author: Pragneshkumar Patel [aut, cre],
   George Ostrouchov [aut],
   Wei-Chen Chen [aut],
