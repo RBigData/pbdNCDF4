@@ -1,5 +1,6 @@
 \name{pbdNCDF4-package}
 \alias{pbdNCDF4-package}
+\alias{pbdNCDF4}
 \docType{package}
 \title{Programming with Big Data -- Interface to Parallel Unidata NetCDF4 Format Data Files}
 \description{

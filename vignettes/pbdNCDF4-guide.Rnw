@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \definecolor{mygreen}{RGB}{0,150,0}
 
+\newcommand{\ncdfversion}{0.1-2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,7 +20,7 @@
 \begin{minipage}{6in}
 \centering
 Pragneshkumar Patel$^1$, George Ostrouchov$^{1,2}$, Wei-Chen Chen$^2$, \\
-Drew Schmidt$^1$, and David Pierce$^3$
+Drew Schmidt$^1$, David Pierce$^3$
 \end{minipage}
 \\
 \\
@@ -39,7 +40,7 @@ San Diago, CA, USA
 %\\
 %\today
 }
-\title{A Quick Guide for the \pkg{pbdNCDF4} Package}
+\title{A Quick Guide for the \pkg{pbdNCDF4} Package {\small (Ver. \ncdfversion)}}
 %\\
 %\vspace{0.2cm} \large (Based on Version 0.1-2)}
 

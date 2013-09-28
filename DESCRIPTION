@@ -1,6 +1,6 @@
 Package: pbdNCDF4
-Version: 0.1-1
-Date: 2013-07-04
+Version: 0.1-2
+Date: 2013-07-30
 Title: Programming with Big Data -- Interface to Parallel Unidata
         NetCDF4 Format Data Files
 Authors@R: c(person("Pragneshkumar", "Patel", role = c("aut", "cre"), email =
@@ -26,7 +26,7 @@ URL: http://r-pbd.org/
 BugReports: http://group.r-pbd.org/
 MailingList: Please send questions and comments regarding pbdR to
         RBigData@gmail.com
-Packaged: 2013-07-03 16:55:26 UTC; snoweye
+Packaged: 2013-09-28 19:47:25 UTC; snoweye
 Author: Pragneshkumar Patel [aut, cre],
   George Ostrouchov [aut],
   Wei-Chen Chen [aut],
